@@ -1,0 +1,71 @@
+/*!*Table Candidates*!*/
+/*.candidates-tab {*/
+/*    border: 1px solid steelblue;*/
+/*    width: 400px;*/
+/*    border-collapse: separate;*/
+/*    border-spacing: 10px 5px;*/
+/*}*/
+/*.candidates-tab-col1{*/
+/*    width: 200px;*/
+/*}*/
+/*.candidates-tab-col2{*/
+/*    width: 200px;*/
+/*}*/
+
+/*!*Input in table Candidates*!*/
+/*input{*/
+/*    width: 200px;*/
+/*    border-radius: 1px;*/
+/*}*/
+
+/*select#sex{*/
+/*    width: 100%;*/
+/*    border-radius: 1px;*/
+/*}*/
+
+/*input#add{*/
+/*    width: 100px;*/
+/*    border-radius: 0;*/
+/*}*/
+
+.candidate_form{
+    border: 1px solid steelblue;
+    margin: 0;
+    max-width: 400px;
+    padding: 8px;
+}
+.candidate_form_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.candidate_form_row input,
+.candidate_form_row select {
+    flex-basis: 200px;
+    box-sizing: border-box;
+    border-radius: 1px;
+}
+
+.candidate_form_row + .candidate_form_row {
+    margin-top: 4px;
+}
+
+.candidate_form_submit{
+    margin-top: 24px;
+    border-radius: 10px;
+}
+inputp[type=submit]
+/*Table Students*/
+
+.students-tab{
+    border: 1px solid steelblue;
+    border-collapse: collapse;
+    width: 600px;
+}
+.students-tab tr td {
+    border: 1px solid steelblue;
+}
+.students-tab-colName{
+
+}

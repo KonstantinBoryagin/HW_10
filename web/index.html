@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta charset="UTF-8">
+    <title>HW_10</title>
+</head>
+<body>
+
+<h3>Форма добавления информации о студенте</h3>
+
+<!--<table class="candidate-tab" id="candidatesTab">-->
+<!--    <tbody>-->
+<!--    <tr>-->
+<!--        <td class="candidates-tab-col1"><label for="fioCandidate"> Имя студента: </label></td>-->
+<!--        <td class="candidates-tab-col2"><input id="fioCandidate" type="text"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><label for="birthDate">Дата рождения: </label></td>-->
+<!--        <td><input id="birthDate" type="date" value="2000-01-01"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Пол:</td>-->
+<!--        <td>-->
+<!--            <select name="sex" id="sex">-->
+<!--                    <option value="1" selected>мужчина</option>-->
+<!--                    <option value="2">женщина</option>-->
+<!--            </select>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--    <tr></tr>-->
+<!--    <tfoot>-->
+<!--    <tr>-->
+<!--        <td colspan="2">&nbsp;</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td> <input type="submit" value="Добавить" id="add"></td>-->
+<!--    </tr>-->
+<!--    </tfoot>-->
+<!--</table>-->
+
+<form class="candidate_form">
+    <div class="candidate_form_row">
+        <label for="name">Имя студента:</label>
+        <input id="name" type="text" />
+    </div>
+    <div class="candidate_form_row">
+        <label for="date">Дата рождения:</label>
+        <input id="date" type="date" value="2000-01-01" />
+    </div>
+    <div class="candidate_form_row">
+        <label>Пол:</label>
+            <select id="sex">
+                <option value="m" selected>мужчина</option>
+                <option value="f">женщина</option>
+            </select>
+    </div>
+    <div class="candidate_form_submit">
+        <input type="submit" value="Добавить" id="add">
+    </div>
+</form>
+
+<h3>Таблица студентов</h3>
+
+<table class ="students-tab" id="studentsTab">
+    <thead>
+    <tr>
+        <td class="students-tab-colName">Имя студента</td>
+        <td class="students-tab-colSex">Пол</td>
+        <td class="students-tab-colDate">Дата рождения</td>
+        <td class="students-tab-colAge">Возраст</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Иван Ограмонович Штейн</td>
+        <td>мужчина</td>
+        <td>12.06.1974</td>
+        <td>46</td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
