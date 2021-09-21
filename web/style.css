@@ -28,18 +28,24 @@
 /*    border-radius: 0;*/
 /*}*/
 
+body{
+    font-family: "Times New Roman",Times , serif;
+}
+
 .candidate_form{
     border: 1px solid steelblue;
     margin: 0;
     max-width: 400px;
     padding: 8px;
 }
+
 .candidate_form_row {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
+
 .candidate_form_row input,
 .candidate_form_row select {
     flex-basis: 200px;
@@ -53,25 +59,29 @@
 
 .candidate_form_submit{
     margin-top: 24px;
-    border-radius: 10px;
+    border-radius: 0;
 }
-input[type=submit].candidate_form_submitq{
-    border-radius: 10px;
-    border: none;
-    box-shadow: none;
-    font-family: inherit;
-    font-size: 50px!important;
-}
+
 /*Table Students*/
 
 .students-tab{
-    border: 1px solid steelblue;
+    /*border: 1px solid steelblue;*/
     border-collapse: collapse;
-    width: 600px;
+    width: 650px;
+    table-layout: fixed;
 }
 .students-tab tr td {
     border: 1px solid steelblue;
 }
 .students-tab-colName{
-
+    width: 300px;
+}
+.students-tab-colSex{
+    width: 120px;
+}
+.students-tab-colDate{
+    width: 150px;
+}
+.students-tab-colAge{
+    width: 80px;
 }

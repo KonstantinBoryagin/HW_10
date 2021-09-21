@@ -39,8 +39,7 @@
 <!--    </tr>-->
 <!--    </tfoot>-->
 <!--</table>-->
-
-<form class="candidate_form">
+<form class="candidate_form" onsubmit="sendData()">
     <div class="candidate_form_row">
         <label for="name">Имя студента:</label>
         <input id="name" type="text" />
@@ -52,12 +51,12 @@
     <div class="candidate_form_row">
         <label>Пол:</label>
             <select id="sex">
-                <option value="m" selected>мужчина</option>
-                <option value="f">женщина</option>
+                <option value="мужчина" selected>мужчина</option>
+                <option value="женщина">женщина</option>
             </select>
     </div>
-    <div class="candidate_form_submit">
-        <input type="submit" value="Добавить" id="add">
+    <div>
+        <input class="candidate_form_submit" type="submit" value="Добавить">
     </div>
 </form>
 
@@ -80,7 +79,19 @@
         <td>46</td>
     </tr>
     </tbody>
+
+    <tfoot>
+    <tr>
+        <td colspan="4">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3">Средний возраст студентов</td>
+        <td>42</td>
+    </tr>
+
+    </tfoot>
 </table>
 
+<script src="app.js"></script>
 </body>
 </html>
