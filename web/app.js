@@ -1,6 +1,8 @@
 window.onload = calculateAvgAge();
 document.getElementById("candidate_form").addEventListener("submit", checkForm)
 
+let studentsStorage = [];
+
 function checkForm() {
     event.preventDefault();
 
@@ -22,6 +24,8 @@ function checkForm() {
         error = "Введено не корректное имя";
     else if (student.age === 0)
         error = "Введите правильный возраст";
+    else if (checkAvailability(student))
+        error = "Этот студент уже внесен в таблицу";
 
     // Выводит сообщение об ошибке или вызывает функцию заполнения таблицы
     if (error !== "") {
@@ -44,6 +48,8 @@ function calculateAge(birthDay) {
 
 // Добавляет студента в таблицу
 function addStudentInTable(student) {
+    studentsStorage.push(student);
+
     const studentsTab = document.getElementById("studentsTab").getElementsByTagName("tbody")[0];
     const newRow = studentsTab.insertRow(-1);
     const newCell = newRow.insertCell(0);
@@ -79,7 +85,16 @@ function calculateAvgAge() {
     } catch (ex) {
         console.log(ex);
     }
-    console.log(avgAge)
     document.getElementById("studentsTabAvgAge").innerHTML = avgAge;
+}
+
+function checkAvailability(student) {
+    console.log(studentsStorage);
+    for (let i = 0; i < studentsStorage.length; i++) {
+        console.log(studentsStorage[i]);
+        if(JSON.stringify(student) === JSON.stringify(studentsStorage[i]))
+            return true;
+    }
+    return false;
 }
 
