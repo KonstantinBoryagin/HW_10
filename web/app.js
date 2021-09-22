@@ -89,7 +89,6 @@ function calculateAvgAge() {
 }
 
 function checkAvailability(student) {
-    console.log(studentsStorage);
     for (let i = 0; i < studentsStorage.length; i++) {
         console.log(studentsStorage[i]);
         if(JSON.stringify(student) === JSON.stringify(studentsStorage[i]))
