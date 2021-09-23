@@ -40,7 +40,7 @@ function checkForm() {
 // Считает возраст, если он не корректен возвращает '0'
 function calculateAge(birthDay) {
     const age = Math.floor((new Date() - new Date(birthDay)) / 1000 / 60 / 60 / 24 / 365);
-    if (age > 0 && age < 100) {
+    if (age > 12 && age < 70) {
         return age;
     } else
         return 0;
@@ -52,21 +52,21 @@ function addStudentInTable(student) {
 
     const studentsTab = document.getElementById("studentsTab").getElementsByTagName("tbody")[0];
     const newRow = studentsTab.insertRow(-1);
-    const newCell = newRow.insertCell(0);
-    const newCell1 = newRow.insertCell(1);
-    const newCell2 = newRow.insertCell(2);
-    const newCell3 = newRow.insertCell(3);
+    const cellName = newRow.insertCell(0);
+    const cellSex = newRow.insertCell(1);
+    const cellDate = newRow.insertCell(2);
+    const cellAge = newRow.insertCell(3);
 
-    newCell.appendChild(document.createTextNode(student.name));
-    newCell1.appendChild(document.createTextNode(student.sex));
-    newCell2.appendChild(document.createTextNode(student.birthDay));
-    newCell3.appendChild(document.createTextNode(student.age));
+    cellName.appendChild(document.createTextNode(student.name));
+    cellSex.appendChild(document.createTextNode(student.sex));
+    cellDate.appendChild(document.createTextNode(student.birthDay));
+    cellAge.appendChild(document.createTextNode(student.age));
 }
 
 // Считает и записывает в таблицу средний возраст студентов
 function calculateAvgAge() {
     let avgAge = 0;
-    let result = 0;
+    let sumAge = 0;
 
     try {
         const table = document.getElementById("studentsTab");
@@ -79,8 +79,8 @@ function calculateAvgAge() {
             const text = td.childNodes.item(0);
             const age = parseInt(text.data)
             if (!isNaN(age))
-                result += age;
-            avgAge = Math.floor(result / rowCount);
+                sumAge += age;
+            avgAge = Math.floor(sumAge / rowCount);
         }
     } catch (ex) {
         console.log(ex);
@@ -90,7 +90,6 @@ function calculateAvgAge() {
 
 function checkAvailability(student) {
     for (let i = 0; i < studentsStorage.length; i++) {
-        console.log(studentsStorage[i]);
         if(JSON.stringify(student) === JSON.stringify(studentsStorage[i]))
             return true;
     }
